@@ -66,7 +66,6 @@ Create a `.env` file in both the **frontend** and **backend** directories and ad
 ```env
 REACT_APP_SUPABASE_URL=your_supabase_url
 REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
-REACT_APP_OPENWEATHER_API_KEY=your_openweather_api_key
 ```  
 
 #### **Backend `.env` file**  
