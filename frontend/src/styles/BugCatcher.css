@@ -1,0 +1,58 @@
+body {
+    background: #f0f2f5;
+}
+
+.bug-catcher-container {
+    min-height: 100vh;
+    background-color: #f0f7f0;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.game-header {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+}
+
+.score, .timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+.game-area {
+    width: 100%;
+    height: calc(100vh - 140px);
+    position: relative;
+}
+
+.bug {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    animation: bugFloat 3s linear;
+}
+
+.bug:hover {
+    transform: scale(1.2);
+}
+
+.game-over {
+    position: fixed;
+    top: 50
+}
+
+.restart-button:hover {
+    background: #1b5e20 !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}

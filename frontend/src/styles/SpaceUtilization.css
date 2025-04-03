@@ -1,0 +1,194 @@
+.space-utilization-container {
+    padding: 80px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    color: #2E7D32;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.content p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.upload-section {
+    text-align: center;
+    padding: 3rem;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    margin: 2rem 0;
+    background-color: #f8f8f8;
+    transition: all 0.3s ease;
+}
+
+.upload-section:hover {
+    border-color: #2E7D32;
+    background-color: #f0f7f0;
+}
+
+.upload-button, .analyze-button {
+    background-color: #2E7D32;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.upload-button:hover, .analyze-button:hover {
+    background-color: #1B5E20;
+}
+
+.upload-button:disabled, .analyze-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.analyzing {
+    text-align: center;
+    padding: 2rem;
+    color: #2E7D32;
+    font-size: 1.1rem;
+}
+
+.analyzing p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.analyzing p::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 3px solid #2E7D32;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.canvas-container {
+    margin: 2rem auto;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.error-message {
+    color: #d32f2f;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #ffebee;
+    border-radius: 8px;
+}
+
+.success-message {
+    color: #2E7D32;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #E8F5E9;
+    border-radius: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .space-utilization-container {
+        padding: 60px 1rem 1rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .upload-section {
+        padding: 2rem 1rem;
+    }
+
+    .upload-button, .analyze-button {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.canvas-container {
+    animation: fadeIn 0.5s ease;
+}
+
+.analyzing {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hover Effects */
+.upload-section.dragover {
+    border-color: #2E7D32;
+    background-color: #E8F5E9;
+}
+
+/* Loading Animation */
+.loading-dots:after {
+    content: '.';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60% { content: '...'; }
+    80%, 100% { content: ''; }
+}
